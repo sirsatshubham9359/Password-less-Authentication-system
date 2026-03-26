@@ -29,13 +29,13 @@ app.get('/api/generate-session', (req, res) => {
 // 2. Endpoint for the Mobile App to verify the scan
 app.post('/api/verify-scan', (req, res) => {
   // CHANGED userId to rollNo to match Android App!
-  const { sessionId, deviceId, rollNo, currentIp } = req.body; 
+  const { sessionId, deviceId, rollNo, currentIp,name } = req.body; 
 
   if (activeSessions[sessionId] && activeSessions[sessionId].status === 'pending') {
     activeSessions[sessionId].status = 'approved';
     
     // Send the rollNo back to the React website
-    io.emit(`auth-success-${sessionId}`, { message: 'Login Granted', rollNo });
+ io.emit(`auth-success-${sessionId}`, { message: 'Login Granted', rollNo, name: name || ''  });
     
     res.json({ success: true, message: 'Authorized access granted instantly' });
   } else {

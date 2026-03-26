@@ -60,7 +60,7 @@ function App() {
         setTimeout(() => {
           // CHANGE THIS URL to your actual campus portal dashboard!
           // It dynamically attaches the student's Roll Number to the web address
-          window.location.href = `https://your-campus-domain.edu/dashboard?student=${data.rollNo}`;
+       window.location.href = `/dashboard.html?student=${data.rollNo}&name=${encodeURIComponent(data.name || '')}`;
         }, 3000);
 
       });

@@ -79,6 +79,7 @@ class ScannerActivity : AppCompatActivity() {
             put("rollNo", rollNo)
             put("deviceId", prefs.getString("DEVICE_UUID", ""))
             put("currentIp", prefs.getString("DEVICE_IP", ""))
+            put("name", prefs.getString("FULL_NAME", ""))
         }
 
         val body = json.toString().toRequestBody("application/json".toMediaType())
