@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Device Registration"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#5a3e1b"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/et_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Full Name"
+        android:textColor="#000000"
+        android:background="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/et_roll_no"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Roll Number"
+        android:textColor="#000000"
+        android:background="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/et_mobile_no"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Mobile Number"
+        android:textColor="#000000"
+        android:inputType="phone"
+        android:background="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/et_device_ip"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:enabled="false"
+        android:background="#E0E0E0"
+        android:textColor="#555555"
+        android:padding="12dp"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/btn_save_fingerprint"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="Store Fingerprint &amp; Register"
+        android:textSize="16sp"
+        android:backgroundTint="#ff8c42"/>
+</LinearLayout>
